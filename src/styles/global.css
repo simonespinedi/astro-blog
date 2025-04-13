@@ -1,14 +1,25 @@
 .header-container{
     padding-top: 10px;
     padding-inline-start: 100px
+    
+    
        
 }
 
 header{
     
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+
 
 }
+
+.right-buttons{
+    
+
+
+}
+
 
 .central-section{
 
