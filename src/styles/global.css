@@ -1,23 +1,30 @@
+
+body{
+
+    background-color: rgb(34, 34, 34);
+}
 .header-container{
-    padding-top: 10px;
-    padding-inline-start: 100px
-    
-    
-       
+    margin: 0;
 }
 
 header{
     
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
+    color: #fff;
 
 
 }
 
 .right-buttons{
     
+    
+    
 
 
+}
+
+.article-buttons{
+    
 }
 
 
@@ -29,5 +36,6 @@ header{
 
 .catchy-quotes{
 
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ececec;
 }
