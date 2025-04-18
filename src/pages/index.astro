@@ -2,29 +2,45 @@
 // import Welcome from '../components/Welcome.astro';
 // import Layout from '../layouts/Layout.astro';
 import '../styles/global.css'
-
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<body>
-<nav class="header-container">
+<body background="/src/assets/background-pattern.webp">
 	<header>
-		<div class="logo">
-			<div class="logo-text">$simonespinedi</div>
-		</div>
+		<nav class="header-container">
+			
+				<div class="logo">
+					<div class="logo-text">
+					<span class="prompt">simonespinedi$ </span><span id="typed-text" class="typed-text"></span>
+					</div>
+				</div>
+				<div class="right-buttons">
+					<a class="article-buttons" href="">articles</a>
+					<a class="whoami-buttons" href="">#whoami</a>
+				</div>
 
-
-	</header>
-</nav>
-<div class="right-buttons">
-	<button class="article-button">articles</button>
-	<button class="whoami-button">#whoami</button>
-</div>
+		</nav>
+</header>
 
 <section class="central-section">
 	<div class="catchy-quotes">
-		<h1>Tutte le grandi storie nascono da una pagina bianca</h1>
+		<h1>Network Engineering and the power of Automation</h1>
 	</div>
 </section>
+<section class="bottom-section">
+	<footer class="footer-icons">
+		<div class="icon-container">
+
+
+
+
+		</div>
+	</footer>
+</section>
+
+
 </body>
+
+<script type="module" src="/src/scripts/typing.js"></script>
+

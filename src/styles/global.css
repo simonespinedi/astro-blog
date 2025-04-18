@@ -1,42 +1,100 @@
 
-body{
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+body{
+    margin: 0;
     background-color: rgb(34, 34, 34);
 }
+
 .header-container{
-    margin: 0;
+
     background-color: rgb(61, 61, 61);
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
-header{
-    
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #fff;
 
+.logo-text {
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    margin: 0 50px;
+    white-space: pre;
+    text-align: center;
+
+
+  }
+  
+  .cursor {
+    display: inline-block;
+    width: 1ch;
+    animation: blink 1s steps(2, start) infinite;
+  }
+  
+  .typed-text::after {
+    content: '|';
+    animation: blink 1s steps(2, start) infinite;
+    font: inherit; /* usa tutto da .logo-text */
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+header{
+
+    background-color: rgb(61, 61, 61);
+    font-family: 'Fira Code', monospace;
+    color: #fff;
+    margin: 0 auto;
 
 }
 
 .right-buttons{
-    
-    
-    
 
+    
+    margin: 0 50px;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
 
 }
 
-.article-buttons{
+.right-buttons a{
+    padding: 0.5rem 0.8rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.right-buttons a:hover{
     
+    background: #cbcbcb;
+    border-radius: 5px;
+    color: #292929;
 }
 
 
 .central-section{
+    align-items: center;
+    max-width: 1500px;
+    margin: 15% auto;
+    text-align: center;
 
-    margin: 100px
+    
     
 }
 
 .catchy-quotes{
 
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 180%;
     color: #ececec;
+    
 }
