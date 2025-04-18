@@ -9,18 +9,25 @@ import '../styles/global.css'
 <body background="/src/assets/background-pattern.webp">
 	<header>
 		<nav class="header-container">
-			
-				<div class="logo">
-					<div class="logo-text">
-					<span class="prompt">simonespinedi$ </span><span id="typed-text" class="typed-text"></span>
-					</div>
-				</div>
-				<div class="right-buttons">
-					<a class="article-buttons" href="">articles</a>
-					<a class="whoami-buttons" href="">#whoami</a>
-				</div>
-
-		</nav>
+			<div class="logo">
+			  <div class="logo-text">
+				<span class="prompt">simonespinedi$ </span>
+				<span id="typed-text" class="typed-text"></span>
+			  </div>
+			</div>
+		  
+			<!-- wrapper con position relative per allineare il menu -->
+			<div class="menu-wrapper">
+			  <button id="menu-toggle" class="menu-toggle" aria-label="Open menu">&#9776;</button>
+			  <div id="right-buttons" class="right-buttons">
+				<a href="/articles" class="article-buttons">articles</a>
+				<a href="/whoami" class="whoami-buttons">#whoami</a>
+			  </div>
+			</div>
+		  </nav>
+		  
+			  
+		  
 </header>
 
 <section class="central-section">
@@ -43,4 +50,5 @@ import '../styles/global.css'
 </body>
 
 <script type="module" src="/src/scripts/typing.js"></script>
+<script type="module" src="/src/scripts/menu-toggle.js"></script>
 
