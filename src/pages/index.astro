@@ -5,15 +5,20 @@ import '../styles/global.css'
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
+<head>
+	<meta charset="UTF-8" />
 
-<body background="/src/assets/background-pattern.webp">
+
+<body>
 	<header>
 		<nav class="header-container">
 			<div class="logo">
-			  <div class="logo-text">
-				<span class="prompt">simonespinedi$ </span>
-				<span id="typed-text" class="typed-text"></span>
-			  </div>
+				<div class="logo-text">
+					<a href="/" class="logo-link">
+					  <span class="prompt">simonespinedi$</span>
+					</a>
+					<span id="typed-text" class="typed-text"></span>
+				  </div>
 			</div>
 		  
 			<!-- wrapper con position relative per allineare il menu -->
@@ -38,16 +43,15 @@ import '../styles/global.css'
 <section class="bottom-section">
 	<footer class="footer-icons">
 		<div class="icon-container">
-
-
-
+			&copy; 2025 simonespinedi
 
 		</div>
-	</footer>
+	  </footer>
 </section>
 
 
 </body>
+</head>
 
 <script type="module" src="/src/scripts/typing.js"></script>
 <script type="module" src="/src/scripts/menu-toggle.js"></script>

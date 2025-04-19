@@ -3,7 +3,13 @@
 body {
   margin: 0;
   background-color: rgb(34, 34, 34);
+  background-image: url('/src/assets/background.webp');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: scroll;
 }
+
 
 .header-container {
   background-color: rgb(61, 61, 61);
@@ -25,6 +31,12 @@ body {
   text-align: center;
 }
 
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+
 .cursor {
   display: inline-block;
   width: 1ch;
@@ -36,6 +48,11 @@ body {
   animation: blink 1s steps(2, start) infinite;
   font: inherit;
 }
+
+#typed-text {
+  margin-left: 0.3ch; /* oppure 0.2ch, oppure 0 se vuoi proprio attaccato */
+}
+
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
@@ -83,10 +100,15 @@ header {
   }
 
   .central-section {
+    min-height: calc(100vh - 180px); /* header + footer */
+    display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
     max-width: 1200px;
-    margin: 20em auto;
+    margin: 0 auto;
     text-align: center;
+    padding: 4rem 1rem;
   }
 
   .catchy-quotes {
@@ -94,6 +116,20 @@ header {
     font-size: 180%;
     color: #ececec;
   }
+
+  .footer-icons {
+    background-color: #292929;
+    text-align: center;
+    color: #e0e0e0; /* più chiaro e leggibile */
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-family: 'Fira Code', monospace;
+    text-shadow: 0 0 2px rgba(0,0,0,0.8); /* per ancora più contrasto */
+  }
+
+
+
+
 }
 
 /* MOBILE ONLY */
@@ -154,16 +190,30 @@ header {
   }
 
   .central-section {
+    min-height: calc(100vh - 200px); /* header + footer */
+    display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
     max-width: 900px;
-    margin: 16em auto;
+    margin: 0 auto;
     text-align: center;
+    padding: 0.5rem 0.5rem;
   }
 
   .catchy-quotes {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0 80px;
-    font-size: 120%;
+    margin: 0 70px;
+    font-size: 110%;
     color: #ececec;
+  }
+
+  .footer-icons {
+    background-color: #292929;
+    text-align: center;
+    color: #e0e0e0; /* più chiaro e leggibile */
+    padding: 1rem;
+    font-size: 0.85rem;
+    text-shadow: 0 0 2px rgba(0,0,0,0.8); /* per ancora più contrasto */
   }
 }
