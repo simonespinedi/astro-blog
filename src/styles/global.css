@@ -217,3 +217,57 @@ header {
     text-shadow: 0 0 2px rgba(0,0,0,0.8); /* per ancora più contrasto */
   }
 }
+
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  color: #f0f0f0;
+  font-family: 'Inter', sans-serif;
+}
+
+.blog-article h1,
+.blog-article h2,
+.blog-article h3 {
+  color: #ffffff;
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+.blog-article p {
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  color: #e0e0e0;
+}
+
+.blog-article a {
+  color: #b1e2d5;
+  text-decoration: underline;
+}
+
+.blog-article a:hover {
+  color: #88c9b6;
+}
+
+.blog-article ul,
+.blog-article ol {
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.blog-article code {
+  background-color: #1f1f1f;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Fira Code', monospace;
+  color: #f5f5f5;
+}
+
+.blog-article pre {
+  background-color: #1f1f1f;
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}

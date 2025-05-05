@@ -1,22 +1,53 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+const { title = "simonespinedi" } = Astro.props;
+import "../styles/global.css";
+---
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="header-container">
+        <div class="logo">
+          <div class="logo-text">
+            <a href="/" class="logo-link">
+              <span class="prompt">simonespinedi$</span>
+            </a>
+            <span id="typed-text" class="typed-text"></span>
+          </div>
+        </div>
+
+        <div class="menu-wrapper">
+          <button id="menu-toggle" class="menu-toggle" aria-label="Open menu">
+            &#9776;
+          </button>
+          <div id="right-buttons" class="right-buttons">
+            <a href="/blog" class="article-buttons">articles</a>
+            <a href="/whoami" class="whoami-buttons">#whoami</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <section class="bottom-section">
+      <footer class="footer-icons">
+        <div class="icon-container">
+          &copy; {new Date().getFullYear()} simonespinedi
+        </div>
+      </footer>
+    </section>
+
+    <script type="module" src="/src/scripts/typing.js"></script>
+    <script type="module" src="/src/scripts/menu-toggle.js"></script>
+  </body>
+</html>
