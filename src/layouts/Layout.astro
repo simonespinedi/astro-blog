@@ -1,16 +1,16 @@
 ---
-const { title = "simonespinedi" } = Astro.props;
-import "../styles/global.css";
+// layout.astro
+import '../styles/global.css';
+const currentYear = new Date().getFullYear();
 ---
 
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>{title}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>simonespinedi</title>
+    <slot name="head" />
   </head>
-
   <body>
     <header>
       <nav class="header-container">
@@ -24,11 +24,9 @@ import "../styles/global.css";
         </div>
 
         <div class="menu-wrapper">
-          <button id="menu-toggle" class="menu-toggle" aria-label="Open menu">
-            &#9776;
-          </button>
+          <button id="menu-toggle" class="menu-toggle" aria-label="Open menu">&#9776;</button>
           <div id="right-buttons" class="right-buttons">
-            <a href="/blog" class="article-buttons">articles</a>
+            <a href="/articles" class="article-buttons">articles</a>
             <a href="/whoami" class="whoami-buttons">#whoami</a>
           </div>
         </div>
@@ -39,13 +37,11 @@ import "../styles/global.css";
       <slot />
     </main>
 
-    <section class="bottom-section">
-      <footer class="footer-icons">
-        <div class="icon-container">
-          &copy; {new Date().getFullYear()} simonespinedi
-        </div>
-      </footer>
-    </section>
+    <footer class="footer-icons bottom-section">
+      <div class="icon-container">
+        &copy; {currentYear} simonespinedi
+      </div>
+    </footer>
 
     <script type="module" src="/src/scripts/typing.js"></script>
     <script type="module" src="/src/scripts/menu-toggle.js"></script>

@@ -1,56 +1,27 @@
 ---
-// import Welcome from '../components/Welcome.astro';
-// import Layout from '../layouts/Layout.astro';
-import '../styles/global.css'
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from '../layouts/Layout.astro';
 ---
-<head>
-	<meta charset="UTF-8" />
-<body>
-	<header>
-		<nav class="header-container">
-			<div class="logo">
-				<div class="logo-text">
-					<a href="/" class="logo-link">
-					  <span class="prompt">simonespinedi$</span>
-					</a>
-					<span id="typed-text" class="typed-text"></span>
-				  </div>
-			</div>
-		  
-			<!-- wrapper con position relative per allineare il menu -->
-			<div class="menu-wrapper">
-			  <button id="menu-toggle" class="menu-toggle" aria-label="Open menu">&#9776;</button>
-			  <div id="right-buttons" class="right-buttons">
-				<a href="/blog" class="article-buttons">articles</a>
-				<a href="/whoami" class="whoami-buttons">#whoami</a>
-			  </div>
-			</div>
-		  </nav>
-		  
-			  
-		  
-</header>
 
-<section class="central-section">
-	<div class="catchy-quotes">
-		<h1>Network Engineering and the power of Automation</h1>
-	</div>
-</section>
-<section class="bottom-section">
-	<footer class="footer-icons">
-		<div class="icon-container">
-			&copy; 2025 simonespinedi
-
-		</div>
-	  </footer>
-</section>
-
-
-</body>
-</head>
-
-<script type="module" src="/src/scripts/typing.js"></script>
-<script type="module" src="/src/scripts/menu-toggle.js"></script>
-
+<Layout>
+  <section class="central-section">
+    <section class="left-side">
+      <div class="catchy-quotes">
+        <h1>Network Engineering and the power of Network Automation</h1>
+      </div>
+      <div class="achievement-pngs">
+        <img src="/src/assets/ccna.png" alt="CCNA Certified" />
+        <img src="/src/assets/devasc.png" alt="DevAsc Certified" />
+      </div>
+      <div class="general-knowledge">
+        <img src="/src/assets/bash.png" alt="BASH language" />
+        <img src="/src/assets/devops.png" alt="DevOps practices" class="wide-devops" />
+        <img src="/src/assets/python.png" alt="Python" />
+      </div>
+    </section>
+    <section class="right-side">
+      <div class="catchy-illustration">
+        <img src="/src/assets/dc-image.png" alt="Data Center Illustration" />
+      </div>
+    </section>
+  </section>
+</Layout>

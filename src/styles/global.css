@@ -2,8 +2,7 @@
 
 body {
   margin: 0;
-  background-color: rgb(34, 34, 34);
-  background-image: url('/src/assets/background.webp');
+  background-color: rgb(50, 56, 56);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -12,7 +11,7 @@ body {
 
 
 .header-container {
-  background-color: rgb(61, 61, 61);
+  background-color: rgb(65, 65, 65);
   padding: 1.5rem 0;
   display: flex;
   justify-content: space-between;
@@ -60,7 +59,7 @@ body {
 }
 
 header {
-  background-color: rgb(61, 61, 61);
+  background-color: rgb(65, 65, 65);
   font-family: 'Fira Code', monospace;
   color: #fff;
   margin: 0 auto;
@@ -103,20 +102,66 @@ header {
     min-height: calc(100vh - 180px); /* header + footer */
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    max-width: 1200px;
+    justify-content: space-between;
+    flex-direction: row;
+    max-width: 1100px;
     margin: 0 auto;
     text-align: center;
-    padding: 4rem 1rem;
+    padding: 1.2rem 1rem;
+    
+    
+  }
+
+  .left-side{
+    
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-bottom: 50px;
   }
 
   .catchy-quotes {
+    
+    max-width: 500px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 180%;
+    font-size: 250%;
     color: #ececec;
+    padding: 0 0.5rem;
   }
 
+  .achievement-pngs img{
+    
+    filter: brightness(0) invert(0.9);
+    max-width: 180px;
+  }
+
+  .general-knowledge {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* This vertically centers them */
+    gap: 2rem;
+  }
+  
+  .general-knowledge img {
+    filter: brightness(0) invert(0.9);
+    max-width: 70px;
+    margin: 0 2rem;
+    display: block;
+  }
+  
+  .general-knowledge img.wide-devops {
+    max-width: 130px;
+  }
+  .rigth-side{
+    justify-content: center;
+    align-items: center;
+  }
+  .catchy-illustration img{
+    padding-top: 0.5rem;
+    max-width: 550px;
+
+  }
+  
   .footer-icons {
     background-color: #292929;
     text-align: center;
@@ -190,7 +235,7 @@ header {
   }
 
   .central-section {
-    min-height: calc(100vh - 200px); /* header + footer */
+    min-height: calc(100vh - 135px); /* header + footer */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -204,8 +249,41 @@ header {
   .catchy-quotes {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 70px;
-    font-size: 110%;
+    font-size: 155%;
     color: #ececec;
+  }
+
+  .achievement-pngs img{
+    
+    filter: brightness(0) invert(0.9);
+    max-width: 90px;
+  }
+
+  .general-knowledge {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* This vertically centers them */
+    gap: 0.5rem;
+  }
+  
+  .general-knowledge img {
+    filter: brightness(0) invert(0.9);
+    max-width: 45px;
+    margin: 0 1rem;
+    display: block;
+  }
+  
+  .general-knowledge img.wide-devops {
+    max-width: 90px;
+  }
+  .rigth-side{
+    justify-content: center;
+    align-items: center;
+  }
+  .catchy-illustration img{
+    padding-top: 1.5rem;
+    max-width: 300px;
+
   }
 
   .footer-icons {
@@ -219,55 +297,3 @@ header {
 }
 
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  color: #f0f0f0;
-  font-family: 'Inter', sans-serif;
-}
-
-.blog-article h1,
-.blog-article h2,
-.blog-article h3 {
-  color: #ffffff;
-  margin-top: 2rem;
-  font-weight: 600;
-}
-
-.blog-article p {
-  line-height: 1.6;
-  margin-bottom: 1.2rem;
-  color: #e0e0e0;
-}
-
-.blog-article a {
-  color: #b1e2d5;
-  text-decoration: underline;
-}
-
-.blog-article a:hover {
-  color: #88c9b6;
-}
-
-.blog-article ul,
-.blog-article ol {
-  padding-left: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-.blog-article code {
-  background-color: #1f1f1f;
-  padding: 0.2rem 0.4rem;
-  border-radius: 4px;
-  font-family: 'Fira Code', monospace;
-  color: #f5f5f5;
-}
-
-.blog-article pre {
-  background-color: #1f1f1f;
-  padding: 1rem;
-  overflow-x: auto;
-  border-radius: 6px;
-  margin-bottom: 1.5rem;
-}
