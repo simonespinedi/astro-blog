@@ -1,8 +1,9 @@
 ---
 title: "Ciao Mondo"
-date: 2025-05-01
+pubDate: 2025-05-01
 description: "Il mio primo articolo in Astro!"
-draft: false
+author: "Simone Spinedi"
+tags: ["hello-world"]
 ---
 
 Benvenuti nel mio primo articolo scritto in Astro!
