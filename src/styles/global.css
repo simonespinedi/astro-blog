@@ -7,6 +7,7 @@ body {
   background-position: center center;
   background-size: cover;
   background-attachment: scroll;
+  
 }
 
 
@@ -75,8 +76,52 @@ header {
   padding: 0 1rem;
 }
 
+.centered-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 70vh;
+  width: 100%;
+}
+
+.article-h1{
+  font-family: 'Fira Code', monospace;
+  color: #e4e4e4;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 2.4rem;
+}
+
+.article-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.article-list a{
+  color: #b1b1b1;
+  font-family: 'Arial', Helvetica, sans-serif;
+  text-decoration-line: none;
+
+}
+
+.article-list small{
+  color: #b1b1b1;
+
+}
+
+.page-content {
+  min-height: calc(100vh - 85px); /* Adjust 80px to your header's height */
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content main {
+  flex: 1;
+}
+
 /* DESKTOP ONLY */
-@media (min-width: 1201px) {
+@media (min-width: 1501px) {
   .right-buttons {
     margin: 0 50px;
     float: right;
@@ -166,8 +211,110 @@ header {
     background-color: #292929;
     text-align: center;
     color: #e0e0e0; /* più chiaro e leggibile */
-    padding: 1rem;
+    padding: 0.5rem;
     font-size: 1.1rem;
+    font-family: 'Fira Code', monospace;
+    text-shadow: 0 0 2px rgba(0,0,0,0.8); /* per ancora più contrasto */
+  }
+
+
+
+
+}
+
+/* DESKTOP MIDSIZE ONLY */
+@media (max-width: 1500px) {
+  .right-buttons {
+    margin: 0 50px;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .right-buttons a {
+    padding: 0.5rem 0.8rem;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .right-buttons a:hover {
+    background: #cbcbcb;
+    border-radius: 5px;
+    color: #292929;
+  }
+
+  .central-section {
+    min-height: calc(100vh - 160px); /* header + footer */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem 0.8rem;
+    
+    
+  }
+
+  .left-side{
+    
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-bottom: 50px;
+  }
+
+  .catchy-quotes {
+    
+    max-width: 400px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 190%;
+    color: #ececec;
+    padding: 0 0.2rem;
+  }
+
+  .achievement-pngs img{
+    
+    filter: brightness(0) invert(0.9);
+    max-width: 140px;
+  }
+
+  .general-knowledge {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* This vertically centers them */
+    gap: 1.2rem;
+  }
+  
+  .general-knowledge img {
+    filter: brightness(0) invert(0.9);
+    max-width: 55px;
+    margin: 0 1.2rem;
+    display: block;
+  }
+  
+  .general-knowledge img.wide-devops {
+    max-width: 100px;
+  }
+  .rigth-side{
+    justify-content: center;
+    align-items: center;
+  }
+  .catchy-illustration img{
+    padding-top: 0.5rem;
+    max-width: 400px;
+
+  }
+  
+  .footer-icons {
+    background-color: #292929;
+    text-align: center;
+    color: #e0e0e0; /* più chiaro e leggibile */
+    padding: 0.8rem;
+    font-size: 0.9rem;
     font-family: 'Fira Code', monospace;
     text-shadow: 0 0 2px rgba(0,0,0,0.8); /* per ancora più contrasto */
   }
@@ -248,7 +395,7 @@ header {
 
   .catchy-quotes {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0 70px;
+    margin: 0 60px;
     font-size: 155%;
     color: #ececec;
   }
@@ -294,6 +441,41 @@ header {
     font-size: 0.85rem;
     text-shadow: 0 0 2px rgba(0,0,0,0.8); /* per ancora più contrasto */
   }
+}
+
+/* Global markdown styles */
+article h1, article h2, article h3, article h4, article h5, article h6 {
+  font-family: 'Fira Code', monospace;
+  color: #b1e2d5;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+article p {
+  color: #ececec;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+
+article ul, article ol {
+  margin-left: 2rem;
+  color: #ececec;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  article h1 { font-size: 1.7rem; }
+  article p { font-size: 1rem; }
+}
+
+@media (min-width: 1201px) and (max-width: 1500px) {
+  article h1 { font-size: 2rem; }
+  article p { font-size: 1.1rem; }
+}
+
+@media (min-width: 1501px) {
+  article h1 { font-size: 2.4rem; }
+  article p { font-size: 1.2rem; }
 }
 
 
