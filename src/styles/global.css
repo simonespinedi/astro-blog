@@ -120,6 +120,22 @@ header {
   flex: 1;
 }
 
+.whoami-section{
+  display:inline;
+  flex-direction: column;
+  align-items: center;
+  min-height: 70vh;
+  max-width: 375px;
+}
+
+.whoami-section h1, .whoami-section h3 {
+  color: #b1b1b1;
+}
+
+.whoami-section p {
+  color: #aaaaaa;
+  font-size: 1.1rem;
+}
 /* DESKTOP ONLY */
 @media (min-width: 1501px) {
   .right-buttons {
@@ -446,7 +462,7 @@ header {
 /* Global markdown styles */
 article h1, article h2, article h3, article h4, article h5, article h6 {
   font-family: 'Fira Code', monospace;
-  color: #b1e2d5;
+  color: #e4e4e4;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
