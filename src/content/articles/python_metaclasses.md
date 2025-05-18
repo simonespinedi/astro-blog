@@ -3,6 +3,7 @@ title: "Python Metaclasses via Network concepts"
 pubDate: 2025-05-18
 author: Simone Spinedi
 description: A deep dive into Python metaclasses with network engineering examples.
+tags: ["Python"]
 ---
 ### Python - Metaclasses
 
