@@ -156,7 +156,7 @@ print('\n')
 print(Net_Inv_Meta.device_counter)
 ```
 
-### Understanding Network Device Management with Python Metaclasses
+## Understanding device management with Python Metaclasses
 
 ### Introduction to Metaclasses
 

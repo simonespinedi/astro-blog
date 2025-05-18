@@ -10,8 +10,22 @@ const tags = Array.from(new Set(posts.flatMap(post => post.data.tags ?? [])));
 <Layout>
   <main class="centered-article-stuff">
     <section class="article-container">
-    <h1 class="article-h1">Articles</h1>
-      <ul class="article-list" id="article-list">
+        <div class="search-bar-container">
+          <input type="text" id="search-input" placeholder="Search articles..." />
+          <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+        </div>
+      
+    <div class="article-header">
+      <h1 class="article-h1">Articles</h1>
+      <div class="filter">
+        <select id="date-filter">
+          <option value="all">All</option>
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+        </select>
+      </div>    
+    </div>
+       <ul class="article-list" id="article-list">
         {posts.map(post => (
           <li data-tags={post.data.tags?.join(',') ?? ''}>
             <a href={`/posts/${post.id}`}>
@@ -26,34 +40,104 @@ const tags = Array.from(new Set(posts.flatMap(post => post.data.tags ?? [])));
     <section class="article-tags">
       <aside class="tags-sidebar">
         <h2>Tags</h2>
-        <ul>
+        <div class="tag-filter-container">
+          <input type="text" id="tag-filter" placeholder="Filter tags..."  />
+          <span class="tag-filter-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+          
+
+        </div>
+        
+          
+        
+        <ul> 
           {tags.map(tag => (
             <li><a href="#" class="tag-link" data-tag={tag}>{tag}</a></li>
           ))}
         </ul>
+
       </aside>
     </section>
   </main>
 
-  <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const tagLinks = document.querySelectorAll('.tag-link');
-    const articles = document.querySelectorAll('#article-list li');
+      <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const tagLinks = document.querySelectorAll('.tag-link');
+        const articles = document.querySelectorAll('#article-list li');
 
-    tagLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const tag = link.dataset.tag;
-        articles.forEach(article => {
-          const tags = article.dataset.tags.split(',');
-          if (tags.includes(tag)) {
-            article.style.display = '';
-          } else {
-            article.style.display = 'none';
-          }
+        tagLinks.forEach(link => {
+          link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const selectedTag = event.target.dataset.tag;
+
+            articles.forEach(article => {
+              const articleTags = article.dataset.tags.split(',');
+              if (selectedTag === 'all' || articleTags.includes(selectedTag)) {
+                article.style.display = '';
+              } else {
+                article.style.display = 'none';
+              }
+            });
+          });
         });
       });
-    });
-  });
-</script>
+      </script>
+      <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const searchInput = document.getElementById('search-input');
+        const articles = document.querySelectorAll('#article-list li');
+
+        searchInput.addEventListener('input', () => {
+          const query = searchInput.value.toLowerCase();
+          articles.forEach(article => {
+            const title = article.querySelector('h2').textContent.toLowerCase();
+            if (title.includes(query)) {
+              article.style.display = '';
+            } else {
+              article.style.display = 'none';
+            }
+          });
+        });
+      });
+      </script>
+      <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const dateFilter = document.getElementById('date-filter');
+        const articles = Array.from(document.querySelectorAll('#article-list li'));
+
+        dateFilter.addEventListener('change', () => {
+          const filterValue = dateFilter.value;
+          if (filterValue === 'newest') {
+            articles.sort((a, b) => new Date(b.querySelector('small').textContent) - new Date(a.querySelector('small').textContent));
+          } else if (filterValue === 'oldest') {
+            articles.sort((a, b) => new Date(a.querySelector('small').textContent) - new Date(b.querySelector('small').textContent));
+          }
+          const articleList = document.getElementById('article-list');
+          articleList.innerHTML = '';
+          articles.forEach(article => articleList.appendChild(article));
+        });
+      });
+      </script>
+      <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const tagFilterInput = document.getElementById('tag-filter');
+        const tagLinks = document.querySelectorAll('.tag-link');
+
+        tagFilterInput.addEventListener('input', () => {
+          const query = tagFilterInput.value.toLowerCase();
+          tagLinks.forEach(link => {
+            const tagText = link.textContent.toLowerCase();
+            if (tagText.includes(query)) {
+              link.style.display = '';
+            } else {
+              link.style.display = 'none';
+            }
+          });
+        });
+      });
+      </script>
+      
+
+
+
+
 </Layout>
