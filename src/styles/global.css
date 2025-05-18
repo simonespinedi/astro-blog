@@ -80,9 +80,19 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 70vh;
-  width: 100%;
 }
+.centered-main > article {
+  max-width: 700px;
+  width: 100%;
+  padding: 2rem;
+  background-color: rgb(45, 47, 56);
+}
+.centered-main > * {
+  width: 100%;
+  max-width: 700px;
+}
+
+
 
 .article-h1{
   font-family: 'Fira Code', monospace;
@@ -136,6 +146,8 @@ header {
   color: #aaaaaa;
   font-size: 1.1rem;
 }
+
+
 
 
 
@@ -240,6 +252,8 @@ header {
 
 
 
+
+
 }
 
 /* DESKTOP MIDSIZE ONLY */
@@ -338,8 +352,6 @@ header {
     font-family: 'Fira Code', monospace;
     text-shadow: 0 0 2px rgba(0,0,0,0.8); /* per ancora più contrasto */
   }
-
-
 
 
 }
@@ -463,41 +475,76 @@ header {
     font-size: 0.85rem;
     text-shadow: 0 0 2px rgba(0,0,0,0.8); /* per ancora più contrasto */
   }
+
+  .centered-main > article {
+    max-width: 350px;
+    width: 100%;
+    padding: 1rem;
+    background-color: rgb(45, 47, 56);
+  }
+
+
 }
 
 /* Global markdown styles */
 article h1, article h2, article h3, article h4, article h5, article h6 {
   font-family: 'Fira Code', monospace;
-  color: #e4e4e4;
+  color: #a7d5e0;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
-article p {
-  color: #ececec;
-  line-height: 1.7;
-  margin-bottom: 1.2rem;
+.article-list p {
+  color: #b1b1b1;
 }
 
-article ul, article ol {
-  margin-left: 2rem;
+article p {
   color: #ececec;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+.article-content pre {
+  padding: 1rem;
+  border-radius: 8px; /* Optional: rounded corners for nicer look */
+  background: #232631; /* Optional: match your dark theme */
+  overflow-x: auto;    /* Prevent overflow */
+}
+
+
+/* Left-align lists inside articles */
+.article-content ul,
+.article-content ol {
+  color: #ececec;
+  text-align: left;
+  margin-left: 0.4rem;    /* Indent from the left */
+  padding-left: 0.8rem; /* Space for bullets/numbers */
+  margin-bottom: 0.3rem;
+  width: auto;          /* Prevent stretching to full width */
+  display: block;
+}
+
+.article-content ul li,
+.article-content ol li {
+  margin-bottom: 0.5rem;
 }
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
-  article h1 { font-size: 1.7rem; }
-  article p { font-size: 1rem; }
+  article h1 { font-size: 1.3rem; }
+  article p { font-size: 0.8rem; }
 }
 
 @media (min-width: 1201px) and (max-width: 1500px) {
-  article h1 { font-size: 2rem; }
-  article p { font-size: 1.1rem; }
+  article h1 { font-size: 1.6rem; }
+  article p { font-size: 1rem; }
 }
 
 @media (min-width: 1501px) {
-  article h1 { font-size: 2.4rem; }
+  article h1 { font-size: 1.8rem; }
   article p { font-size: 1.2rem; }
+  article ul li {font-size: 1.1rem;}
+  article ol li {font-size: 1.1rem;}
 }
 
 

@@ -16,7 +16,7 @@ const { Content } = await render(post);
 
 <Layout>
   <main class="centered-main">
-    <article>
+    <article class="article-content">
       <h1>{post.data.title}</h1>
       <p><small>{post.data.pubDate.toDateString()} — by {post.data.author}</small></p>
       <Content />

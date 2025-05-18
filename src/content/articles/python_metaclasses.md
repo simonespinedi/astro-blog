@@ -1,14 +1,10 @@
 ---
-title: "Python Metaclasses using Network concepts"
-date: 2025-02-23T20:54:50+01:00
-draft: false
-toc: false
-images:
-tags:
-  - python
-  - metaclasses
+title: "Python Metaclasses via Network concepts"
+pubDate: 2025-05-18
+author: Simone Spinedi
+description: A deep dive into Python metaclasses with network engineering examples.
 ---
-# Python - Metaclasses
+### Python - Metaclasses
 
 - **Metaclasses are part of metaprogramming in Python**, used to define how other classes are constructed. They act as blueprints for creating classes, setting up patterns or rules that all classes derived from them must follow.
 - **Metaclasses manage class behavior rather than instance behavior**. While a traditional class defines behaviors for its instances, a metaclass defines behaviors for classes it generates.
