@@ -12,7 +12,7 @@ body {
 
 
 .header-container {
-  background-color: rgb(65, 65, 65);
+  background-color: rgb(50, 56, 56);
   padding: 1.5rem 0;
   display: flex;
   justify-content: space-between;
@@ -60,7 +60,7 @@ body {
 }
 
 header {
-  background-color: rgb(65, 65, 65);
+  background-color: rgb(50, 56, 56);
   font-family: 'Fira Code', monospace;
   color: #fff;
   margin: 0 auto;
@@ -329,7 +329,7 @@ header {
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: center;
     padding: 1.2rem 1rem;
@@ -345,9 +345,10 @@ header {
     padding-bottom: 50px;
   }
 
+
   .catchy-quotes {
-    
-    max-width: 500px;
+
+    max-width: 900px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 250%;
     color: #ececec;
@@ -382,8 +383,10 @@ header {
     align-items: center;
   }
   .catchy-illustration img{
+    display:grid;
     padding-top: 0.5rem;
     max-width: 550px;
+    flex-direction: column-reverse;
 
   }
   
