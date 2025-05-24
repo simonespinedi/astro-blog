@@ -38,12 +38,25 @@ const currentYear = new Date().getFullYear();
       <slot />
     </main>
 
-    <footer class="footer-icons bottom-section">
-      <div class="icon-container">
-        &copy; {currentYear} simonespinedi
-      </div>
-    </footer>
+ <footer class="footer-icons bottom-section">
+  <div class="icon-container">
+    <a href="https://github.com/simonespinedi" target="_blank" rel="noopener">
+      <img src="/src/assets/github.png" alt="GitHub profile" />
+    </a>
+    <a href="https://x.com/spinedisimone" target="_blank" rel="noopener">
+      <img src="/src/assets/x.png" alt="Twitter profile" />
+    </a>
+    <a href="https://www.linkedin.com/in/simonespinedi/" target="_blank" rel="noopener">
+      <img src="/src/assets/linkedin.png" alt="LinkedIn profile" />
+    </a>
+    <a href="https://www.threads.com/@simonespinedi" target="_blank" rel="noopener">
+      <img src="/src/assets/threads.png" alt="Threads profile" />
+    </a>
+    &copy; {currentYear} simonespinedi
+  </div>
+</footer>
     </div>
+
 
     <script type="module" src="/src/scripts/typing.js"></script>
     <script type="module" src="/src/scripts/menu-toggle.js"></script>

@@ -300,8 +300,6 @@ header {
 
 
 
-
-
 /* DESKTOP ONLY */
 @media (min-width: 1501px) {
   .right-buttons {
@@ -397,6 +395,25 @@ header {
     font-size: 1.1rem;
     font-family: 'Fira Code', monospace;
     text-shadow: 0 0 2px rgba(0,0,0,0.8); /* per ancora più contrasto */
+  }
+
+  .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Add this line */
+    gap: 0.7em;
+  }
+
+  .icon-container a {
+    display: flex;
+    align-items: center;
+  }
+
+  .icon-container img {
+    display: block;
+    max-width: 25px;
+    height: auto;
+    filter: brightness(0) invert(0.9);
   }
 
 }
@@ -637,14 +654,9 @@ header {
 
   }
 
-  .footer-icons {
-    background-color: #292929;
-    text-align: center;
-    color: #e0e0e0; /* più chiaro e leggibile */
-    padding: 1rem;
-    font-size: 0.85rem;
-    text-shadow: 0 0 2px rgba(0,0,0,0.8); /* per ancora più contrasto */
-    margin-top: 0;
+  .icon-container a{
+    filter: brightness(0) invert(0.9);
+    max-width: 90px;
     
   }
 
