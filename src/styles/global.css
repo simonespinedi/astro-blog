@@ -162,12 +162,14 @@ header {
   flex: 1;
 }
 
-.whoami-section{
-  display:inline-block;
-  flex-direction:row;
-  align-items: center;
-  min-height: 70vh;
-  max-width: 375px;
+.whoami-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 6rem;
 }
 
 .whoami-section h1, .whoami-section h3 {
@@ -177,6 +179,38 @@ header {
 .whoami-section p {
   color: #aaaaaa;
   font-size: 1.1rem;
+}
+
+.whoami-text {
+  max-width: 400px;
+  color: #aaaaaa;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.whoami-text h1 {
+  color: #b1b1b1;
+  margin-bottom: 1rem;
+}
+
+.myimage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 375px;
+  flex: 0 0 375px;
+}
+
+.whoami-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15%;
+  margin-top: 1.7rem;
+  margin-bottom: 1rem;
+
+
+
 }
 
 .tags-sidebar {
@@ -324,7 +358,7 @@ header {
   }
 
   .central-section {
-    min-height: calc(100vh - 180px); /* header + footer */
+    min-height: calc(100vh - 180px);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -332,8 +366,7 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
-    padding: 1.2rem 1rem;
-    
+    padding: -0.2rem 1rem; 
     
   }
 
@@ -662,6 +695,19 @@ header {
     max-width: 90px;
     
   }
+
+  .whoami-section {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    gap: 1rem;
+  }
+  .myimage {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
 
   .centered-main > article {
     max-width: 350px;
